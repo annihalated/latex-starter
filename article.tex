@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{parskip}
+\usepackage{caption}
+\usepackage{lipsum}
+\captionsetup[table]{position=top,labelfont=bf, labelsep=space, font=large, justification=justified, singlelinecheck=false, skip=1.5pt}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+\title{Article Template}
+\author{Nihal Sahu \and John Doe\thanks{\lipsum[4]}}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{abstract}
+    \lipsum[5]
+\end{abstract}
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\lipsum
+
+\begin{table}[htbp]
+\hrule height 1pt\medskip
+\caption{Ideas and sources}
+\hrule
+\medskip
+\small \lipsum[4]
+\vspace{2mm}
+\begin{center}
+    \begin{tabular}{ l l l l l }
+    \midrule
+    Idea & Source \\\midrule
+    Typesetting & CV Radhakrishnan \\
+    Software Design & Rich Hickey \\
+    \end{tabular}
+\end{center}
+\medskip
+\hrule
+\end{table}
+
+\section{Section Name}
+\lipsum
+\section{Conclusion}
+\lipsum
+\end{document}
