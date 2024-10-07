@@ -2,7 +2,9 @@
 \usepackage{parskip}
 \usepackage{caption}
 \usepackage{lipsum}
-\captionsetup[table]{position=top,labelfont=bf, labelsep=space, font=large, justification=justified, singlelinecheck=false, skip=1.5pt}
+\usepackage{pgfplots}
+
+\captionsetup{position=top,labelfont=bf, labelsep=space, font=large, justification=justified, singlelinecheck=false, skip=1.5pt}
 \usepackage{microtype}
 \usepackage{booktabs}
 
@@ -26,7 +28,7 @@
 \caption{Ideas and sources}
 \hrule
 \medskip
-\small \lipsum[4]
+\lipsum[4]
 \vspace{2mm}
 \begin{center}
     \begin{tabular}{ l l l l l }
@@ -39,6 +41,44 @@
 \medskip
 \hrule
 \end{table}
+
+\begin{figure}
+\hrule height 1pt\medskip
+\caption{GDP Growth (annual \%)}
+\hrule
+\medskip
+\lipsum[4]
+\vspace{2mm}
+\begin{center}
+ 
+\begin{tikzpicture}
+\begin{axis}[
+xlabel={},
+width=\textwidth,
+mark=square,
+ylabel={GDP growth (in \%)},
+% remove comma in xticklabels
+xticklabel style={/pgf/number format/set thousands separator={}},
+xtick distance=1,
+nodes near coords
+]
+\addplot[color=black, x={Year}, y={GDP growth (in \%)}] table {
+2015 8
+2016 8.3
+2017 6.8
+2018 6.5
+2019 3.9
+2020 -5.8
+2021 9.7
+2022 7
+2023 7.6
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\medskip
+\hrule
+\end{figure}
 
 \section{Section Name}
 \lipsum
