@@ -4,7 +4,7 @@
 \usepackage{lipsum}
 \usepackage{pgfplots}
 
-\captionsetup{position=top,labelfont=bf, labelsep=space, font=large, justification=justified, singlelinecheck=false, skip=1.5pt}
+\captionsetup{position=top,labelfont=bf, labelsep=space, justification=justified, singlelinecheck=false, skip=1.5pt}
 \usepackage{microtype}
 \usepackage{booktabs}
 
@@ -24,12 +24,13 @@
 \lipsum
 
 \begin{table}[htbp]
+
 \hrule height 1pt\medskip
 \caption{Ideas and sources}
 \hrule
-\medskip
-\lipsum[4]
-\vspace{2mm}
+\bigskip
+\footnotesize\lipsum[4]
+\bigskip
 \begin{center}
     \begin{tabular}{ l l l l l }
     \midrule
@@ -44,11 +45,11 @@
 
 \begin{figure}
 \hrule height 1pt\medskip
-\caption{GDP Growth (annual \%)}
+\caption{India GDP growth (annual \%)}
 \hrule
-\medskip
-\lipsum[4]
-\vspace{2mm}
+\bigskip
+\footnotesize\lipsum[4]
+\bigskip
 \begin{center}
  
 \begin{tikzpicture}
@@ -77,6 +78,8 @@ nodes near coords
 \end{tikzpicture}
 \end{center}
 \medskip
+Source: World Bank
+\smallskip
 \hrule
 \end{figure}
 
