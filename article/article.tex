@@ -7,9 +7,10 @@
 \captionsetup{position=top,labelfont=bf, labelsep=space, justification=justified, singlelinecheck=false, skip=1.5pt}
 \usepackage{microtype}
 \usepackage[colorlinks=true]{hyperref}
+\usepackage{cleveref}
 \usepackage{booktabs}
-
 \newenvironment{floatintro}{\bigskip\footnotesize}{\bigskip}
+\newenvironment{floatsource}{\medskip}{\smallskip\hrule}
 
 \title{Article Template}
 \author{Nihal Sahu \and John Doe\thanks{\lipsum[4]}}
@@ -18,6 +19,9 @@
 \maketitle
 \begin{abstract}
     \lipsum[5]
+    \\\\
+
+    \textit{Keywords: lipsum, dolor, lorem, ipsum}
 \end{abstract}
 \newpage
 \tableofcontents
@@ -38,11 +42,12 @@
     \midrule
     Idea & Source \\\midrule
     Typesetting & CV Radhakrishnan \\
-    Software Design & Rich Hickey \\
+    Software Design & Rich Hickey \\\bottomrule
     \end{tabular}
 \end{center}
-\medskip
-\hrule
+\begin{floatsource}
+Source: Something came to me in a dream
+\end{floatsource}
 \end{table}
 
 \begin{figure}
@@ -78,10 +83,9 @@
     \end{axis}
     \end{tikzpicture}
 \end{center}
-\medskip
+\begin{floatsource}
 Source: World Bank
-\smallskip
-\hrule
+\end{floatsource}
 \end{figure}
 
 \section{Section Name}
